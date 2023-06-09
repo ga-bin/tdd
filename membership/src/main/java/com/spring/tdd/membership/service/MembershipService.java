@@ -54,4 +54,9 @@ public class MembershipService {
 						.build())
 				.collect(Collectors.toList());
 	}
+
+	public MembershipDetailResponse getMembership(final Long membershipId, final String userId) {
+		return null;
+	}
+
 }
