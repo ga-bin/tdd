@@ -125,6 +125,8 @@ public class MembershipServiceTest {
 		// when
 		final MembershipDetailResponse result = target.getMembership(membershipId, userId);
 		
+		// then
+		assertThat(result.getMembershipType()).isEqualTo(MembershipType.NAVER);
 		assertThat(result.getPoint()).isEqualTo(point);
 	}
 }
