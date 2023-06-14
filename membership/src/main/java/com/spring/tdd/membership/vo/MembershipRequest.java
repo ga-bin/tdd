@@ -1,5 +1,8 @@
 package com.spring.tdd.membership.vo;
 
+import com.spring.tdd.membership.validation.ValidationGroups.MembershipAccumulateMarker;
+import com.spring.tdd.membership.validation.ValidationGroups.MembershipAddMarker;
+
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -14,9 +17,10 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor(force = true)
 public class MembershipRequest {
 	
-	@NotNull
-	@Min(0)
+	@NotNull(groups = {MembershipAddMarker.class, MembershipAccumulateMarker.class})
+	@Min(value = 0, groups = {MembershipAddMarker.class, MembershipAccumulateMarker.class})
 	private final Integer point;
-	@NotNull
+	
+	@NotNull(groups = {MembershipAddMarker.class})
 	private final MembershipType membershipType;
 }
