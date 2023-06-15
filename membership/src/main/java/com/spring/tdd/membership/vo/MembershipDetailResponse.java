@@ -12,11 +12,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MembershipDetailResponse {
-
+  
 	private Long id;
 	private MembershipType membershipType;
 	private String userId;
 	private Integer point;
 	private LocalDateTime createdAt;
 	private LocalDateTime updatedAt;
+	
 }

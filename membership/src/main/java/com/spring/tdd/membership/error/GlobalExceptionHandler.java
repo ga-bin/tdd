@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
-
+ 
 	// 유효성 검사 통과못한 경우
 	@Override
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(
